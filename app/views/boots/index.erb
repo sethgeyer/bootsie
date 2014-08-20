@@ -1,0 +1,56 @@
+
+
+
+<h2>Types of Boots</h2>
+<br/>
+
+
+
+<b>Some Table Classes in Bootstrap</b><br/>
+  table => generic table w/ lines separating rows, good spacing<br/>
+  table-striped => striped alternating rows <br/>
+  table-bordered => borders out the entire table<br/>
+  table-hover => higlights the row you mouseover
+<br/>
+<br/>
+
+<h4 class="formatted">Fluid Boostrapped Table</h4>
+  <table class="table table-striped table-hover">
+    <tr class="info">
+    <td>Name</td>
+    <td>Description </td>
+    <td>M/F</td>
+    <td>Amount</td>
+    </tr>
+    <tbody>
+    <%@boots.each do |boot|%>
+      <tr class="row-fluid">
+        <td><%=boot.name%></td>
+        <td><%=boot.description%></td>
+        <td><%=boot.sex%></td>
+        <td><%=boot.amount%></td>
+      </tr>
+    <%end%>
+    </tbody>
+  </table>
+
+<!--<h4 class="formatted">FixedWidth Boostrapped Table</h4>-->
+<!--<table class="">-->
+  <!--<tr class="info row">-->
+    <!--<td class="col-xs-2">Name</td>-->
+    <!--<td class="col-xs-2">Description </td>-->
+    <!--<td class="col-xs-2">M/F</td>-->
+    <!--<td class="col-xs-2">Amount</td>-->
+  <!--</tr>-->
+  <!--<tbody>-->
+  <!--<%@boots.each do |boot|%>-->
+    <!--<tr class="row">-->
+      <!--<td><%=boot.name%></td>-->
+      <!--<td><%=boot.description%></td>-->
+      <!--<td><%=boot.sex%></td>-->
+      <!--<td><%=boot.amount%></td>-->
+    <!--</tr>-->
+  <!--<%end%>-->
+  <!--</tbody>-->
+<!--</table>-->
+

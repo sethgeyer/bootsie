@@ -1,0 +1,98 @@
+<h1>Add New Boots</h1>
+<br/>
+
+<h1 class="unformatted">Unformatted Form</h1>
+<%=form_for @boot do |f| %>
+
+  <%=f.label :name%>
+  <%=f.text_field :name%>
+
+  <%=f.label :description%>
+  <%=f.text_field :description%>
+
+  <%=f.label :amount%>
+  <%=f.text_field :amount%>
+
+  <%=f.label :sex%>
+  <%=f.text_field :sex%>
+  <%=f.submit%>
+  <%= link_to "Cancel", root_path%>
+<%end%>
+
+
+<br/>
+<br/>
+
+
+
+Form Classes:
+form-horizontal
+form-inline
+
+
+<h1 class="formatted">Bootstrapped Form</h1>
+
+<h3>Horizontal Form</h3>
+<%=form_for @boot, class:"form-horizontal", role:"form" do |f| %>
+
+  <div class="form-group">
+    <%=f.label :name%>
+    <%=f.text_field :name, class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+  <%=f.label :description%>
+  <%=f.text_field :description, class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+  <%=f.label :amount%>
+  <%=f.text_field :amount, class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%=f.label :sex%>
+    <%=f.text_field :sex, class:"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%=f.submit class:"btn btn-success"%>
+    <%= link_to "Cancel", root_path%>
+  </div>
+<%end%>
+
+
+<hr/>
+
+
+<h3>Inline Form</h3>
+<div class="row">
+<%=form_for @boot, class:"form-inline", role:"form" do |f| %>
+
+  <div class="col-xs-2 form-group">
+    <%=f.label :name, class:"sr-only"%>
+    <%=f.text_field :name, class:"form-control", placeholder:"Name"%>
+  </div>
+
+  <div class="col-xs-3 form-group">
+    <%=f.label :description, class:"sr-only"%>
+    <%=f.text_field :description, class:"form-control", placeholder:"Description"%>
+  </div>
+
+  <div class="col-xs-2 form-group">
+    <%=f.label :amount, class:"sr-only"%>
+    <%=f.text_field :amount, class:"form-control", placeholder:"amount"%>
+  </div>
+
+  <div class="col-xs-2 form-group">
+    <%=f.label :sex, class:"sr-only"%>
+    <%=f.text_field :sex, class:"form-control", placeholder:"M/F"%>
+  </div>
+
+  <div class="col-xs-3 form-group">
+    <%=f.submit class:"btn btn-info"%>
+    <%= link_to "Cancel", root_path%>
+  </div>
+<%end%>
+
+</div>
